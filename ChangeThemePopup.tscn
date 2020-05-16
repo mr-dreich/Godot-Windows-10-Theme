@@ -1,0 +1,153 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ChangeThemePopup.gd" type="Script" id=1]
+
+[node name="ChangeThemePopup" type="WindowDialog"]
+margin_right = 403.0
+margin_bottom = 212.0
+window_title = "Change Theme for \"Side\""
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 396.0
+margin_bottom = 205.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer"]
+margin_left = 19.0
+margin_top = 18.0
+margin_right = 369.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 350, 0 )
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_right = 350.0
+margin_bottom = 14.0
+text = "Themes Found:"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 350.0
+margin_bottom = 38.0
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 244.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="OpenFolderButton" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 248.0
+margin_right = 350.0
+margin_bottom = 20.0
+hint_tooltip = "Opens custom Themes directory."
+text = "Open Themes"
+
+[node name="Spacer" type="Control" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 350.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 350.0
+margin_bottom = 103.0
+custom_constants/separation = 38
+alignment = 1
+
+[node name="Left" type="VBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 6.0
+margin_right = 156.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left"]
+margin_right = 150.0
+margin_bottom = 14.0
+text = "Left Current Theme:"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 18.0
+margin_right = 150.0
+margin_bottom = 37.0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 7
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left/MarginContainer"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 150.0
+margin_bottom = 19.0
+text = "Theme Name"
+
+[node name="Right" type="VBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 194.0
+margin_right = 344.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right"]
+margin_right = 150.0
+margin_bottom = 14.0
+text = "Right Current Theme:"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right"]
+margin_top = 18.0
+margin_right = 150.0
+margin_bottom = 37.0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 7
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right/MarginContainer"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 150.0
+margin_bottom = 19.0
+text = "Theme Name"
+
+[node name="Spacer2" type="Control" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 350.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 131.0
+margin_right = 350.0
+margin_bottom = 161.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="AcceptButton" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 92.0
+margin_right = 167.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 75, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Accept"
+
+[node name="CancelButton" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 182.0
+margin_right = 257.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 75, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Cancel"
+[connection signal="about_to_show" from="." to="." method="_on_ThemeWindow_about_to_show"]
+[connection signal="item_selected" from="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer3/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer3/OpenFolderButton" to="." method="_on_OpenFolderButton_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2/AcceptButton" to="." method="_on_AcceptButton_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2/CancelButton" to="." method="_on_CancelButton_pressed"]

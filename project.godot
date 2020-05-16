@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Theme Viewer"
+config/name="Godot Theme Viewer"
 config/description="A Godot program that loads and displays Godot Themes."
 run/main_scene="res://Main.tscn"
 run/low_processor_mode=true
