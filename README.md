@@ -2,7 +2,7 @@
 
 I created a small Godot Application that displays Godot Themes when put into the themes folder along side the executable.
 
-I also created a Windows 10 Theme for Godot
+I also created a Windows 10 Theme for Godot, its still a WIP, but very functional. Hasn't been tested as an Editor theme.
 
 The download includes both Light and Dark themes.
 
