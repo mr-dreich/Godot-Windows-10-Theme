@@ -7,3 +7,5 @@ I also created a Windows 10 Theme for Godot
 The download includes both Light and Dark themes.
 
 Just place the theme folder within the Res:// of your project. 
+
+![Alt text](https://i.imgur.com/GJx4BsA.jpg "Screenshot")
