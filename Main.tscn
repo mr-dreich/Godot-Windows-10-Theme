@@ -1,0 +1,932 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://themes/windows10/light_theme.tres" type="Theme" id=2]
+[ext_resource path="res://ThemeWindow.gd" type="Script" id=3]
+[ext_resource path="res://themes/windows10/dark_theme.tres" type="Theme" id=4]
+[ext_resource path="res://themes/windows10/assets/fonts/segoeUI/Segoe UI Bold.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 12 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftTheme" type="Control" parent="HBoxContainer"]
+margin_right = 503.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 500, 0 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/LeftTheme"]
+margin_left = 4.0
+margin_right = 500.0
+margin_bottom = 720.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 488.0
+margin_bottom = 712.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer"]
+margin_right = 480.0
+margin_bottom = 704.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer"]
+margin_right = 480.0
+margin_bottom = 704.0
+rect_min_size = Vector2( 400, 0 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control"]
+margin_right = 450.0
+margin_bottom = 894.0
+rect_min_size = Vector2( 125, 0 )
+mouse_filter = 2
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 440.0
+margin_bottom = 1269.0
+mouse_filter = 2
+size_flags_vertical = 3
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_right = 430.0
+margin_bottom = 39.0
+
+[node name="ThemeTitle" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 325.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+text = "Theme Title"
+
+[node name="LoadTheme" type="Button" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 329.0
+margin_right = 430.0
+margin_bottom = 39.0
+text = "Load Theme"
+
+[node name="Spacer1" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 49.0
+margin_right = 430.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="ButtonsLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 430.0
+margin_bottom = 117.0
+text = "Buttons:"
+
+[node name="Buttons" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 127.0
+margin_right = 430.0
+margin_bottom = 313.0
+custom_constants/separation = 10
+
+[node name="EnabledButton" type="Button" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_right = 121.0
+margin_bottom = 39.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+enabled_focus_mode = 0
+text = "Enabled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisabledButton" type="Button" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 49.0
+margin_right = 126.0
+margin_bottom = 88.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+disabled = true
+enabled_focus_mode = 0
+text = "Disabled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggleButton" type="Button" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 98.0
+margin_right = 113.0
+margin_bottom = 137.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Toggle Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggledButton" type="Button" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 147.0
+margin_right = 122.0
+margin_bottom = 186.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 0
+text = "Toggled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 323.0
+margin_right = 430.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Checkboxes" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 368.0
+margin_right = 430.0
+margin_bottom = 472.0
+
+[node name="CheckboxLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Checkbox:"
+
+[node name="CheckBoxUnchecked" type="CheckBox" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 27.0
+margin_right = 106.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Unchecked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxChecked" type="CheckBox" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 54.0
+margin_right = 89.0
+margin_bottom = 77.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+pressed = true
+text = "Checked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxDisabled" type="CheckBox" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 81.0
+margin_right = 90.0
+margin_bottom = 104.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+disabled = true
+text = "Disabled"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spacer3" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 482.0
+margin_right = 430.0
+margin_bottom = 517.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Options" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 527.0
+margin_right = 430.0
+margin_bottom = 587.0
+
+[node name="OptionsLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Options"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Options Box:"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Options"]
+margin_top = 27.0
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Enabled Option"
+items = [ "Enabled Option", null, false, 0, null, "Disabled Option", null, true, 1, null, "Enabled Option", null, false, 2, null ]
+selected = 0
+
+[node name="Spacer4" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 597.0
+margin_right = 430.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="ToggleSwitches" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 642.0
+margin_right = 430.0
+margin_bottom = 719.0
+
+[node name="ToggleLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Toggle Switch:"
+
+[node name="CheckButtonOff" type="CheckButton" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_top = 27.0
+margin_right = 74.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+text = "Off  "
+
+[node name="CheckButtonOn" type="CheckButton" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_top = 54.0
+margin_right = 73.0
+margin_bottom = 77.0
+size_flags_horizontal = 0
+pressed = true
+text = "On  "
+
+[node name="Spacer5" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 729.0
+margin_right = 430.0
+margin_bottom = 764.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Tabs" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 774.0
+margin_right = 430.0
+margin_bottom = 956.0
+
+[node name="TabLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Tab Container:"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 182.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 422.0
+margin_bottom = 147.0
+tab_align = 0
+
+[node name="Tab 1 Enabled" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Tab 2 Disabled" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Tab 3 Enabled" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Spacer6" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 966.0
+margin_right = 430.0
+margin_bottom = 1001.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="TextBox" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1011.0
+margin_right = 430.0
+margin_bottom = 1138.0
+
+[node name="TextBoxLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/TextBox"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "TextBox:"
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/TextBox"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 0, 100 )
+caret_blink = true
+
+[node name="Spacer7" type="Control" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1148.0
+margin_right = 430.0
+margin_bottom = 1183.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="LineEdit" type="VBoxContainer" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1193.0
+margin_right = 430.0
+margin_bottom = 1259.0
+
+[node name="LineEditLabel" type="Label" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/LineEdit"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Line Edit:"
+
+[node name="TextEdit" type="LineEdit" parent="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/LineEdit"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 66.0
+clear_button_enabled = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="RightTheme" type="Control" parent="HBoxContainer"]
+margin_left = 507.0
+margin_right = 1010.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 500, 0 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/RightTheme"]
+margin_left = 4.0
+margin_right = 500.0
+margin_bottom = 720.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 488.0
+margin_bottom = 712.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer"]
+margin_right = 480.0
+margin_bottom = 704.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer"]
+margin_right = 480.0
+margin_bottom = 704.0
+rect_min_size = Vector2( 400, 0 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control"]
+margin_right = 450.0
+margin_bottom = 894.0
+rect_min_size = Vector2( 125, 0 )
+mouse_filter = 2
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 440.0
+margin_bottom = 1269.0
+mouse_filter = 2
+size_flags_vertical = 3
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_right = 430.0
+margin_bottom = 39.0
+
+[node name="ThemeTitle" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 325.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+text = "Theme Title"
+
+[node name="LoadTheme" type="Button" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 329.0
+margin_right = 430.0
+margin_bottom = 39.0
+text = "Load Theme"
+
+[node name="Spacer1" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 49.0
+margin_right = 430.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="ButtonsLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 430.0
+margin_bottom = 117.0
+text = "Buttons:"
+
+[node name="Buttons" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 127.0
+margin_right = 430.0
+margin_bottom = 313.0
+custom_constants/separation = 10
+
+[node name="EnabledButton" type="Button" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_right = 121.0
+margin_bottom = 39.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+enabled_focus_mode = 0
+text = "Enabled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisabledButton" type="Button" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 49.0
+margin_right = 126.0
+margin_bottom = 88.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+disabled = true
+enabled_focus_mode = 0
+text = "Disabled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggleButton" type="Button" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 98.0
+margin_right = 113.0
+margin_bottom = 137.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Toggle Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggledButton" type="Button" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Buttons"]
+margin_top = 147.0
+margin_right = 122.0
+margin_bottom = 186.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 0
+text = "Toggled Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 323.0
+margin_right = 430.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Checkboxes" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 368.0
+margin_right = 430.0
+margin_bottom = 472.0
+
+[node name="CheckboxLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Checkbox:"
+
+[node name="CheckBoxUnchecked" type="CheckBox" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 27.0
+margin_right = 106.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Unchecked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxChecked" type="CheckBox" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 54.0
+margin_right = 89.0
+margin_bottom = 77.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+pressed = true
+text = "Checked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBoxDisabled" type="CheckBox" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Checkboxes"]
+margin_top = 81.0
+margin_right = 90.0
+margin_bottom = 104.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+disabled = true
+text = "Disabled"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spacer3" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 482.0
+margin_right = 430.0
+margin_bottom = 517.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Options" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 527.0
+margin_right = 430.0
+margin_bottom = 587.0
+
+[node name="OptionsLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Options"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Options Box:"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Options"]
+margin_top = 27.0
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Enabled Option"
+items = [ "Enabled Option", null, false, 0, null, "Disabled Option", null, true, 1, null, "Enabled Option", null, false, 2, null ]
+selected = 0
+
+[node name="Spacer4" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 597.0
+margin_right = 430.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="ToggleSwitches" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 642.0
+margin_right = 430.0
+margin_bottom = 719.0
+
+[node name="ToggleLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Toggle Switch:"
+
+[node name="CheckButtonOff" type="CheckButton" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_top = 27.0
+margin_right = 74.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+text = "Off  "
+
+[node name="CheckButtonOn" type="CheckButton" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/ToggleSwitches"]
+margin_top = 54.0
+margin_right = 73.0
+margin_bottom = 77.0
+size_flags_horizontal = 0
+pressed = true
+text = "On  "
+
+[node name="Spacer5" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 729.0
+margin_right = 430.0
+margin_bottom = 764.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Tabs" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 774.0
+margin_right = 430.0
+margin_bottom = 956.0
+
+[node name="TabLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Tab Container:"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 182.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 422.0
+margin_bottom = 147.0
+tab_align = 0
+
+[node name="Tab 1 Enabled" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Tab 2 Disabled" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Tab 3 Enabled" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/Tabs/PanelContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 39.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Spacer6" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 966.0
+margin_right = 430.0
+margin_bottom = 1001.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="TextBox" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1011.0
+margin_right = 430.0
+margin_bottom = 1138.0
+
+[node name="TextBoxLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/TextBox"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "TextBox:"
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/TextBox"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 0, 100 )
+caret_blink = true
+
+[node name="Spacer7" type="Control" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1148.0
+margin_right = 430.0
+margin_bottom = 1183.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="LineEdit" type="VBoxContainer" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer"]
+margin_top = 1193.0
+margin_right = 430.0
+margin_bottom = 1259.0
+
+[node name="LineEditLabel" type="Label" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/LineEdit"]
+margin_right = 430.0
+margin_bottom = 23.0
+text = "Line Edit:"
+
+[node name="TextEdit" type="LineEdit" parent="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/LineEdit"]
+margin_top = 27.0
+margin_right = 430.0
+margin_bottom = 66.0
+clear_button_enabled = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="ThemeWindow" type="WindowDialog" parent="."]
+margin_right = 403.0
+margin_bottom = 212.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="ThemeWindow"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="ThemeWindow/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 205.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ThemeWindow/PanelContainer/CenterContainer"]
+margin_left = 25.0
+margin_top = 18.0
+margin_right = 375.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 350, 0 )
+
+[node name="Label" type="Label" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_right = 350.0
+margin_bottom = 14.0
+text = "Themes Found:"
+
+[node name="OptionButton" type="OptionButton" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 350.0
+margin_bottom = 38.0
+
+[node name="Spacer" type="Control" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 350.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 350.0
+margin_bottom = 103.0
+custom_constants/separation = 38
+alignment = 1
+
+[node name="Left" type="VBoxContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 6.0
+margin_right = 156.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Label" type="Label" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left"]
+margin_right = 150.0
+margin_bottom = 14.0
+text = "Left Current Theme:"
+
+[node name="MarginContainer" type="MarginContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 18.0
+margin_right = 150.0
+margin_bottom = 37.0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 7
+
+[node name="Label" type="Label" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Left/MarginContainer"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 150.0
+margin_bottom = 19.0
+text = "Theme Name"
+
+[node name="Right" type="VBoxContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 194.0
+margin_right = 344.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Label" type="Label" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right"]
+margin_right = 150.0
+margin_bottom = 14.0
+text = "Right Current Theme:"
+
+[node name="MarginContainer" type="MarginContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right"]
+margin_top = 18.0
+margin_right = 150.0
+margin_bottom = 37.0
+custom_constants/margin_top = 5
+custom_constants/margin_left = 7
+
+[node name="Label" type="Label" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Right/MarginContainer"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 150.0
+margin_bottom = 19.0
+text = "Theme Name"
+
+[node name="Spacer2" type="Control" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 350.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer"]
+margin_top = 131.0
+margin_right = 350.0
+margin_bottom = 161.0
+custom_constants/separation = 15
+alignment = 1
+
+[node name="AcceptButton" type="Button" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 92.0
+margin_right = 167.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 75, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Accept"
+
+[node name="CancelButton" type="Button" parent="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 182.0
+margin_right = 257.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 75, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Cancel"
+[connection signal="pressed" from="HBoxContainer/LeftTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer/LoadTheme" to="." method="_on_Left_LoadTheme_pressed"]
+[connection signal="pressed" from="HBoxContainer/RightTheme/PanelContainer/HBoxContainer/ScrollContainer/Control/MarginContainer/VBoxContainer/HBoxContainer/LoadTheme" to="." method="_on_Right_LoadTheme_pressed"]
+[connection signal="about_to_show" from="ThemeWindow" to="ThemeWindow" method="_on_ThemeWindow_about_to_show"]
+[connection signal="popup_hide" from="ThemeWindow" to="." method="_on_ThemeWindow_popup_hide"]
+[connection signal="item_selected" from="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/OptionButton" to="ThemeWindow" method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2/AcceptButton" to="ThemeWindow" method="_on_AcceptButton_pressed"]
+[connection signal="pressed" from="ThemeWindow/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2/CancelButton" to="ThemeWindow" method="_on_CancelButton_pressed"]
