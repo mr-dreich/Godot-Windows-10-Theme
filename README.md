@@ -1,4 +1,4 @@
-# Godot-Windows-95-Theme
+# Godot-Windows-10-Theme
 
 A WIP Windows 10 Godot Theme for Application and Game development.
 
