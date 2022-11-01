@@ -1,8 +1,8 @@
 # Godot-Windows-10-Theme
 
-A WIP Windows 10 Godot Theme for Application and Game development.
+A WIP windows 10 godot 3.x theme for application and game development.
 
-Currently broken when used as an Editor Theme.
+Currently broken when used as an editor theme.
 
 The screenshot was created using [ViolinBG's Godot Desktop Theme](https://github.com/violinbg/godot-desktop-themes)
 
